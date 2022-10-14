@@ -51,15 +51,18 @@ int main()
 			printSquare(square1);
 			break;
 		case 2:
+		    {
 			printf("\n Вы выбрали Прямоугольник \n");
-			Rectang rectang1; //Создаем вторую фигуру
+			Rectang* rectang1 = new Rectang; //Создание динамической переменной структуры Rectang(указателя)
 			printf("\n Пример \n");
-			rectang1 = initRectang(2, 4); // Инициализация прямоугольника
-			printRectang(rectang1); //Вывод площади прямоугольника на экран
+			*rectang1 = initRectang(2, 4); // Инициализация прямоугольника
+			printRectang(*rectang1); //Вывод площади прямоугольника на экран
 			printf("\n\n Введите данные: \n\n");
-			rectang1 = setRectang(rectang1); //Установка значений
-			printRectang(rectang1);
+			*rectang1 = setRectang(*rectang1); //Установка значений
+			printRectang(*rectang1);
+			delete rectang1; //освобождение памяти
 			break;
+		    }
 		case 3:
 			printf("\n Вы выбрали Треугольник \n");
 			Triangle triangle1; //Создаем третью фигуру

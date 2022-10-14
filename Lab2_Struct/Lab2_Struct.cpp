@@ -10,6 +10,7 @@
 #include "otrezok.h"
 #include "Rectang.h"
 #include "Triangle.h"
+#include "trapezoid.h"
 
 int main()
 {
@@ -26,9 +27,10 @@ int main()
 		printf("\n 1) Квадрат");
 		printf("\n 2) Прямоугольник");
 		printf("\n 3) Треугольник");
-		printf("\n 4) Завершить программу");
+		printf("\n 4) Трапеция");
+		printf("\n 5) Завершить программу");
 		printf("\n\n Введите номер фигуры: ");
-		while (scanf("%d", &N) != 1 || N <= 0 || N > 4)
+		while (scanf("%d", &N) != 1 || N <= 0 || N > 5)
 		{
 			while (getchar() != '\n');
 			printf("\n Вы ввели Неверный номер. Повторите попытку.\n");
@@ -66,7 +68,17 @@ int main()
 			triangle1 = setTriangle(triangle1); //Установка значений
 			printTriangle(triangle1);
 			break;
+		case 4:
+			printf("\n Вы выбрали Трапецию \n");
+			Trapezoid trapezoid1; //Создаем Четвертую фигуру
+			printf("\n Пример \n");
+			trapezoid1 = initTrapezoid(4, 2, 3); // Инициализация Трапеции
+			printTrapezoid(trapezoid1); //Вывод площади Трапеции на экран
+			printf("\n\n Введите данные: \n\n");
+			trapezoid1 = setTrapezoid(trapezoid1); //Установка значений
+			printTrapezoid(trapezoid1);
+			break;
 		}
 
-	} while (N != 4);
+	} while (N != 5);
 }

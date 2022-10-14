@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Lab2_Struct.cpp" />
     <ClCompile Include="Rectang.cpp" />
     <ClCompile Include="Square.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="Otrezok.h" />
     <ClInclude Include="Rectang.h" />
     <ClInclude Include="Square.h" />

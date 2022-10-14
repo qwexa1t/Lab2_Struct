@@ -7,10 +7,11 @@
 #include <windows.h>
 #include <ctype.h>
 #include "Square.h"
-#include "otrezok.h"
+#include "Otrezok.h"
 #include "Rectang.h"
 #include "Triangle.h"
-#include "trapezoid.h"
+#include "Trapezoid.h"
+#include "Circle.h"
 
 int main()
 {
@@ -28,9 +29,10 @@ int main()
 		printf("\n 2) Прямоугольник");
 		printf("\n 3) Треугольник");
 		printf("\n 4) Трапеция");
-		printf("\n 5) Завершить программу");
+		printf("\n 5) Круг");
+		printf("\n 6) Завершить программу");
 		printf("\n\n Введите номер фигуры: ");
-		while (scanf("%d", &N) != 1 || N <= 0 || N > 5)
+		while (scanf("%d", &N) != 1 || N <= 0 || N > 6)
 		{
 			while (getchar() != '\n');
 			printf("\n Вы ввели Неверный номер. Повторите попытку.\n");
@@ -78,7 +80,18 @@ int main()
 			trapezoid1 = setTrapezoid(trapezoid1); //Установка значений
 			printTrapezoid(trapezoid1);
 			break;
+		case 5:
+			printf("\n Вы выбрали Круг \n");
+			Сircle circle1; //Создаем Пятую фигуру
+			printf("\n Пример \n");
+			circle1 = initСircle(7); // Инициализация Круга
+			printСircle(circle1); //Вывод площади Круга на экран
+			printf("\n\n Введите данные: \n\n");
+			circle1 = setСircle(circle1); //Установка значений
+			printСircle(circle1);
+			break;
+
 		}
 
-	} while (N != 5);
+	} while (N != 6);
 }

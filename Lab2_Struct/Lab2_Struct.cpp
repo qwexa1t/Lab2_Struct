@@ -8,6 +8,7 @@
 #include <ctype.h>
 #include "Square.h"
 #include "otrezok.h"
+#include "Rectang.h"
 
 int main()
 {
@@ -22,9 +23,10 @@ int main()
 		printf("\n Программа для вычисления площади различных фигур");
 		printf("\n Выберите фигуру: ");
 		printf("\n 1) Квадрат");
-		printf("\n 2) Завершить программу");
+		printf("\n 2) Прямоугольник");
+		printf("\n 3) Завершить программу");
 		printf("\n\n Введите номер фигуры: ");
-		while (scanf("%d", &N) != 1 || N <= 0 || N > 2)
+		while (scanf("%d", &N) != 1 || N <= 0 || N > 3)
 		{
 			while (getchar() != '\n');
 			printf("\n Вы ввели Неверный номер. Повторите попытку.\n");
@@ -42,6 +44,18 @@ int main()
 			square1 = setSquare(square1); //Установка значений
 			printSquare(square1);
 			break;
+		case 2:
+			printf("\n Вы выбрали Прямоугольник \n");
+			Rectang rectang1; //Создаем вторую фигуру
+			printf("\n Пример \n");
+			rectang1 = initRectang(2, 4); // Инициализация прямоугольника
+			printRectang(rectang1); //Вывод площади прямоугольника на экран
+			printf("\n\n Введите данные: \n\n");
+			rectang1 = setRectang(rectang1); //Установка значений
+			printRectang(rectang1);
+			break;
+			
 		}
-	} while (N != 2);
+
+	} while (N != 3);
 }

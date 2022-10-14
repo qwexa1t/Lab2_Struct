@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab2_Struct.cpp" />
+    <ClCompile Include="Rectang.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Otrezok.h" />
+    <ClInclude Include="Rectang.h" />
     <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

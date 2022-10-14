@@ -9,6 +9,7 @@
 #include "Square.h"
 #include "otrezok.h"
 #include "Rectang.h"
+#include "Triangle.h"
 
 int main()
 {
@@ -24,9 +25,10 @@ int main()
 		printf("\n Выберите фигуру: ");
 		printf("\n 1) Квадрат");
 		printf("\n 2) Прямоугольник");
-		printf("\n 3) Завершить программу");
+		printf("\n 3) Треугольник");
+		printf("\n 4) Завершить программу");
 		printf("\n\n Введите номер фигуры: ");
-		while (scanf("%d", &N) != 1 || N <= 0 || N > 3)
+		while (scanf("%d", &N) != 1 || N <= 0 || N > 4)
 		{
 			while (getchar() != '\n');
 			printf("\n Вы ввели Неверный номер. Повторите попытку.\n");
@@ -54,8 +56,17 @@ int main()
 			rectang1 = setRectang(rectang1); //Установка значений
 			printRectang(rectang1);
 			break;
-			
+		case 3:
+			printf("\n Вы выбрали Треугольник \n");
+			Triangle triangle1; //Создаем третью фигуру
+			printf("\n Пример \n");
+			triangle1 = initTriangle(3, 5); // Инициализация тругольника
+			printTriangle(triangle1); //Вывод площади треугольника на экран
+			printf("\n\n Введите данные: \n\n");
+			triangle1 = setTriangle(triangle1); //Установка значений
+			printTriangle(triangle1);
+			break;
 		}
 
-	} while (N != 3);
+	} while (N != 4);
 }

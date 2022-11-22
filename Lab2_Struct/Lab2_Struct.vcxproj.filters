@@ -38,9 +38,6 @@
     <ClInclude Include="Square.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Otrezok.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Rectang.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>

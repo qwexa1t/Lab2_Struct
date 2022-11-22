@@ -136,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
-    <ClInclude Include="Otrezok.h" />
     <ClInclude Include="Rectang.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="Trapezoid.h" />

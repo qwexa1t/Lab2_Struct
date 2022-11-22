@@ -4,27 +4,25 @@
 #include<math.h>
 #define PI 3.14
 
-Ñircle initÑircle(int a)
+Ñircle initÑircle(int value_radius)
 {
 	Ñircle circle1;
-	circle1.length.radius[0] = a;
+	circle1.radius = value_radius;
 	return circle1;
 }
 Ñircle setÑircle(Ñircle circle1)
 {
 	printf(" Ââåäèòå Ğàäèóñ:");
-	scanf("%d", &circle1.length.radius[0]);
+	scanf("%d", &circle1.radius);
 	return circle1;
 }
 float areaÑircle(Ñircle circle1)
 {
-	float area;
-	area = PI * circle1.length.radius[0]* circle1.length.radius[0];
-	return area;
+	return PI * circle1.radius* circle1.radius;
 }
 void printÑircle(Ñircle circle1)
 {
-	printf("\n Ğàäèóñ - %d", circle1.length.radius[0]);
+	printf("\n Ğàäèóñ - %d", circle1.radius);
 	printf("\n Ïëîùàäü - %.2f\n", areaÑircle(circle1));
 }
 

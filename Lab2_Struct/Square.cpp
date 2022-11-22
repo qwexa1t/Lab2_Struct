@@ -4,31 +4,27 @@
 #include<math.h>
 #include "Square.h"
 
-
-Square initSquare(int a)
+Square initSquare(int value_side)
 {
 	Square square1;
-	square1.length.storona[0] = a;
+	square1.side = value_side;
 	return square1;
-
 }
 
 Square setSquare(Square square1)
 {
 	printf(" Введите сторону:");
-	scanf("%d", &square1.length.storona[0]);
+	scanf("%d", &square1.side);
 	return square1;
 }
 
 int areaSquare(Square square1)
 {
-	int area;
-	area = square1.length.storona[0] * square1.length.storona[0];
-	return area;
+	return square1.side * square1.side;
 }
 
 void printSquare(Square square1)
 {
-	printf("\n Сторона - %d", square1.length.storona[0]);
+	printf("\n Сторона - %d", square1.side);
 	printf("\n Площадь - %d\n", areaSquare(square1));
 }

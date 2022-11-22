@@ -7,7 +7,6 @@
 #include <windows.h>
 #include <ctype.h>
 #include "Square.h"
-#include "Otrezok.h"
 #include "Rectang.h"
 #include "Triangle.h"
 #include "Trapezoid.h"
@@ -16,9 +15,6 @@
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	//Подключение Русского языка
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
 	int N;
 
 	do

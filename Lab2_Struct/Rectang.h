@@ -1,16 +1,13 @@
 #pragma once
 
-#include "Otrezok.h"
-
 struct Rectang
 {
-	char color[20];
-	Otrezok length;
-
+	int length;
+	int width;
 };
 
 //прототипы функций
-Rectang initRectang(int a,int b);
+Rectang initRectang(int value_length,int value_width);
 Rectang setRectang(Rectang rectang1);
 int areaRectang(Rectang rectang1);
 void printRectang(Rectang rectang1);
